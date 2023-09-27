@@ -1,0 +1,1 @@
+This is a simple script that solves quadratic equation based on request from Toby. ENJOY
