@@ -1,34 +1,33 @@
 import math
 
-print("Waddup, Let's solve some quads")
-print("--------------------------------")
+print("Waddup, shall we begin ?")
+print("------------------------------------------------")
 
-# Gather coefficients from the user
-coef_a = float(input("Enter the coefficient of (a): "))
-coef_b = float(input("Enter the coefficient of (b): "))
-coef_c = float(input("Enter the coefficient of (c): "))
+# Let's get those coefficients from you
+a_coefficient = float(input("Give me the 'a' coefficient: "))
+b_coefficient = float(input("How about the 'b' coefficient: "))
+c_coefficient = float(input("Lastly, the 'c' coefficient: "))
 
 print()
-print(f"Solving your problem: {coef_a}x^2 + {coef_b}x + {coef_c} = 0")
+print(f"Alright, we're diving into: {a_coefficient}x^2 + {b_coefficient}x + {c_coefficient} = 0")
 
-# Calculate the discriminant
-discriminant = coef_b**2 - 4*coef_a*coef_c
+# Time to crunch the numbers
+discriminant = b_coefficient**2 - 4*a_coefficient*c_coefficient
 
 if discriminant > 0:
-    # Two distinct real solutions
-    sol1 = (-coef_b + math.sqrt(discriminant)) / (2*coef_a)
-    sol2 = (-coef_b - math.sqrt(discriminant)) / (2*coef_a)
-    print(f"There are two precise real solutions: {sol1} and {sol2}")
+    # We've got two distinct real solutions
+    sol1 = (-b_coefficient + math.sqrt(discriminant)) / (2*a_coefficient)
+    sol2 = (-b_coefficient - math.sqrt(discriminant)) / (2*a_coefficient)
+    print(f"We've got it! Two precise real solutions: {sol1} and {sol2}")
 
 elif discriminant == 0:
-    # One real solution (double root)
-    sol = -coef_b / (2*coef_a)
-    print(f"There is one precise solution (double root): {sol}")
+    sol = -b_coefficient / (2*a_coefficient)
+    print(f"Looks like we have a single precise solution (double root): {sol}")
 
 else:
-    # Two complex solutions
-    real_part = -coef_b / (2*coef_a)
-    imaginary_part = math.sqrt(-discriminant) / (2*coef_a)
-    print(f"There are two complex solutions: {real_part} + {imaginary_part}i and {real_part} - {imaginary_part}i")
+    # Here come two complex solutions
+    real_part = -b_coefficient / (2*a_coefficient)
+    imaginary_part = math.sqrt(-discriminant) / (2*a_coefficient)
+    print(f"We've got two complex solutions for this: {real_part} + {imaginary_part}i and {real_part} - {imaginary_part}i")
 
-print("Done and Dusted!")
+print("Done and Dusted")
